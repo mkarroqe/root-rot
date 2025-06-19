@@ -27,6 +27,8 @@ To use this GitHub Action in your repository:
     - Click `New repository secret` and add a new secret named CLAUDE_API_KEY.
    
  ## Example Output
- | `Healthy Commit` | `Potentially Rotting` | `Root Rot Detected` |
- | ---------------- | --------------------- | ------------------- |
- | | ![image](https://github.com/user-attachments/assets/b8fed743-3e45-4d58-8191-d0ea92fc4272) | |
+ | Prediction | Output |
+ | ---------- | ------ |
+ | `Healthy Commit` | ![image](https://github.com/user-attachments/assets/7704ee76-ae76-4c2d-b485-5900784f5743) |
+ | `Potentially Rotting` | ![image](https://github.com/user-attachments/assets/b8fed743-3e45-4d58-8191-d0ea92fc4272) |
+ | `Root Rot Detected` | ![image](https://github.com/user-attachments/assets/305a3230-0add-4acc-9ecf-d5a205047532) |
