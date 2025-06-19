@@ -37,7 +37,9 @@ jobs:
         shell: bash
 
       - name: Run Root Rot Detector
-        run: python predict_commit.py "${{ steps.get_commit_message.outputs.commit_message }}"
+        run: |
+          echo "CLAUDE_API_KEY: $CLAUDE_API_KEY"
+          python predict_commit.py "${{ steps.get_commit_message.outputs.commit_message }}"
         env:
           # Optionally pass as an environment variable if preferred
           COMMIT_MESSAGE_ENV: "${{ steps.get_commit_message.outputs.commit_message }}"
