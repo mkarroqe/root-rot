@@ -1,4 +1,3 @@
-# .github/workflows/predict_commit.yml
 name: Root Rot Commit Message Prediction
 
 on:
