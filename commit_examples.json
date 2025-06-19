@@ -1,0 +1,50 @@
+[
+  {
+    "message": "fix: resolve critical bug in user authentication",
+    "type": "unproblematic"
+  },
+  {
+    "message": "feat: add new user profile page with editable fields",
+    "type": "unproblematic"
+  },
+  {
+    "message": "docs: update README with installation instructions",
+    "type": "unproblematic"
+  },
+  {
+    "message": "refactor: improve performance of data processing module",
+    "type": "unproblematic"
+  },
+  {
+    "message": "chore: update dependencies and remove unused packages",
+    "type": "unproblematic"
+  },
+  {
+    "message": "quick fix",
+    "type": "problematic"
+  },
+  {
+    "message": "bug fixes",
+    "type": "problematic"
+  },
+  {
+    "message": "done",
+    "type": "problematic"
+  },
+  {
+    "message": "asdf",
+    "type": "problematic"
+  },
+  {
+    "message": "updated something",
+    "type": "problematic"
+  },
+  {
+    "message": "temp commit",
+    "type": "problematic"
+  },
+  {
+    "message": "fix styling",
+    "type": "problematic"
+  }
+]

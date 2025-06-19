@@ -1,0 +1,37 @@
+# .github/workflows/predict_commit.yml
+name: Root Rot Commit Message Prediction
+
+on:
+  push:
+    branches:
+      - main # Trigger on push to the main branch (or your default branch)
+
+jobs:
+  detect_root_rot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x' # Use the latest Python 3.x
+
+      - name: Get latest commit message
+        id: get_commit_message
+        run: |
+          # Get the full commit message of the latest commit
+          COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+          # Make the commit message available as an output for the next step
+          echo "commit_message<<EOF" >> $GITHUB_OUTPUT
+          echo "$COMMIT_MESSAGE" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Run Root Rot Detector
+        run: python predict_commit.py "${{ steps.get_commit_message.outputs.commit_message }}"
+        env:
+          # Optionally pass as an environment variable if preferred
+          COMMIT_MESSAGE_ENV: "${{ steps.get_commit_message.outputs.commit_message }}"
