@@ -6,6 +6,9 @@ on:
     branches:
       - main # Trigger on push to the main branch (or your default branch)
 
+env:
+    CLAUDE_API_KEY: main
+
 jobs:
   detect_root_rot:
     runs-on: ubuntu-latest
