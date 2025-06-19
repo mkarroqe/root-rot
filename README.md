@@ -26,5 +26,7 @@ To use this GitHub Action in your repository:
     - In your GitHub repository, go to Settings > Secrets and variables > Actions.
     - Click `New repository secret` and add a new secret named CLAUDE_API_KEY.
    
- 
-
+ ## Example Output
+ | `Healthy Commit` | `Potentially Rotting` | `Root Rot Detected` |
+ | ---------------- | --------------------- | ------------------- |
+ | | ![image](https://github.com/user-attachments/assets/b8fed743-3e45-4d58-8191-d0ea92fc4272) | |
