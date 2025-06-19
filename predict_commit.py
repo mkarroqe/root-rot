@@ -4,6 +4,7 @@ import asyncio
 import os
 from claude_service import analyze_commit_with_claude # Import the AI analysis function
 
+# This is a comment.
 def load_examples(file_path="commit_examples.json"):
     """Loads the commit message examples from a JSON file.
     This function is kept for structural consistency and if you later decide
